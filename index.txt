@@ -2,8 +2,8 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
+alt = Surya Abdillah
+Surya Abdillah
 Web developer
 
 Show Contacts
