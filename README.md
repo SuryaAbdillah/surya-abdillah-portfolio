@@ -1,8 +1,8 @@
 # Surya Abdillah's Portfolio Website
 
-Repositori ini berupa website portofolio Surya. Temukan berbagai hal menarik terkait saya, dari projek-projek yang berkaitan dengan ML, AI, NLP, database, Image Processing, dan sebagainya. Selain itu, terkadang saya juga membuat kue untuk mengisi waktu luang saya. 😁
+This repository is a portfolio website of Surya. Discover various interesting things about me, from projects related to ML, AI, NLP, databases, Image Processing, and more. Additionally, I sometimes bake cakes in my free time. 😁
 
-Anda dapat menghubungi saya melalui LinkedIn atau Email saya:
+You can contact me via LinkedIn or my email:
 
 - LinkedIn: [Surya's LinkedIn](https://www.linkedin.com/in/surya-abdillah/)
 - Email: [suryaabdillah172@gmail.com](mailto:suryaabdillah172@gmail.com)
