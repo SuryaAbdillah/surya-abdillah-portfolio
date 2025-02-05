@@ -122,6 +122,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("[data-form]");
   const formBtn = document.querySelector("[data-form-btn]");
+  const successMessage = document.querySelector("#success-message");
 
   form.addEventListener("submit", async function (event) {
     event.preventDefault(); // Mencegah reload halaman
@@ -138,14 +139,18 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       if (response.ok) {
-        alert("Pesanmu telah terkirim!"); // Bisa diganti dengan notifikasi di halaman
-        form.reset(); // Mengosongkan form
-        formBtn.setAttribute("disabled", ""); // Menonaktifkan kembali tombol
+        successMessage.style.display = "block"; // Tampilkan pesan sukses
+        form.reset(); // Kosongkan form
+        formBtn.setAttribute("disabled", ""); // Nonaktifkan kembali tombol
       } else {
-        alert("Terjadi kesalahan. Silakan coba lagi.");
+        successMessage.style.display = "block";
+        successMessage.style.color = "red";
+        successMessage.innerText = "Terjadi kesalahan, silakan coba lagi ❌";
       }
     } catch (error) {
-      alert("Gagal mengirim pesan. Periksa koneksi internetmu.");
+      successMessage.style.display = "block";
+      successMessage.style.color = "red";
+      successMessage.innerText = "Gagal mengirim pesan. Periksa koneksi internetmu ⚠";
     }
   });
 });
