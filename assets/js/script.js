@@ -118,3 +118,34 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("[data-form]");
+  const formBtn = document.querySelector("[data-form-btn]");
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault(); // Mencegah reload halaman
+
+    formBtn.setAttribute("disabled", ""); // Nonaktifkan tombol sementara
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (response.ok) {
+        alert("Pesanmu telah terkirim!"); // Bisa diganti dengan notifikasi di halaman
+        form.reset(); // Mengosongkan form
+        formBtn.setAttribute("disabled", ""); // Menonaktifkan kembali tombol
+      } else {
+        alert("Terjadi kesalahan. Silakan coba lagi.");
+      }
+    } catch (error) {
+      alert("Gagal mengirim pesan. Periksa koneksi internetmu.");
+    }
+  });
+});
