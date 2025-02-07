@@ -1,11 +1,7 @@
 'use strict';
 
-
-
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
@@ -13,7 +9,6 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
 
 // custom select variables
 const select = document.querySelector("[data-select]");
@@ -73,8 +68,6 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 }
 
-
-
 // contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
@@ -93,8 +86,6 @@ for (let i = 0; i < formInputs.length; i++) {
 
   });
 }
-
-
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
@@ -118,16 +109,15 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("[data-form]");
   const formBtn = document.querySelector("[data-form-btn]");
   const successMessage = document.querySelector("#success-message");
 
   form.addEventListener("submit", async function (event) {
-    event.preventDefault(); // Mencegah reload halaman
+    event.preventDefault(); 
 
-    formBtn.setAttribute("disabled", ""); // Nonaktifkan tombol sementara
+    formBtn.setAttribute("disabled", ""); 
 
     const formData = new FormData(form);
 
@@ -139,9 +129,9 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       if (response.ok) {
-        successMessage.style.display = "block"; // Tampilkan pesan sukses
-        form.reset(); // Kosongkan form
-        formBtn.setAttribute("disabled", ""); // Nonaktifkan kembali tombol
+        successMessage.style.display = "block"; 
+        form.reset(); 
+        formBtn.setAttribute("disabled", ""); 
       } else {
         successMessage.style.display = "block";
         successMessage.style.color = "red";
