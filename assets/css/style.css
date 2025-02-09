@@ -744,14 +744,15 @@ main {
 }
 
 .skills-item {
-  min-width: 50%;
-  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .skills-item img {
-  width: auto; 
-  height: 100px; 
-  object-fit: contain; 
+  width: 80px; 
+  height: 80px;
+  object-fit: contain;
   filter: grayscale(1);
   transition: var(--transition-1);
 }
