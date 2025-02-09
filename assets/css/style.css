@@ -744,7 +744,7 @@ main {
 }
 
 .skills-item {
-  width: max-content;
+  width: auto;
   scroll-snap-align: start;
   display: flex;
   justify-content: center;
