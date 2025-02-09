@@ -732,8 +732,8 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 15px;
-  margin: 0 -15px;
+  gap: 5px;
+  margin: 0;
   padding: 25px;
   padding-bottom: 25px;
   overflow-x: auto;
@@ -744,24 +744,22 @@ main {
 }
 
 .skills-item {
+  width: max-content;
+  scroll-snap-align: start;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .skills-item img {
-  width: 80px; 
   height: 80px;
+  width: auto;
+  max-width: 100%;
   object-fit: contain;
   filter: grayscale(1);
   transition: var(--transition-1);
 }
 
-
 .skills-item img:hover { filter: grayscale(0); }
-
-
-
 
 
 /*-----------------------------------*\
@@ -841,7 +839,6 @@ main {
 .skills-title { margin-bottom: 20px; }
 
 .skills-list { padding: 20px; }
-
 
 .skills-item:not(:last-child) { margin-bottom: 15px; }
 
