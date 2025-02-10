@@ -1,0 +1,45 @@
+<article class="contact" data-page="contact">
+
+    <header>
+        <h2 class="h2 article-title">Contact</h2>
+    </header>
+
+    <section class="mapbox" data-mapbox>
+        <figure>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126646.20961854764!2d112.63011043206549!3d-7.2756119752714055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbf8381ac47f%3A0x3027a76e352be40!2sSurabaya%2C%20East%20Java%2C%20Indonesia!5e0!3m2!1sen!2stw!4v1738732940325!5m2!1sen!2stw"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </figure>
+    </section>
+
+    <section class="contact-form">
+
+        <h3 class="h3 form-title">Contact Form</h3>
+        <p id="success-message" style="display: none; color: rgb(32, 154, 32); margin-top: 10px;">
+            Pesan berhasil dikirim! ✅
+        </p>
+
+
+        <form action="https://formspree.io/f/xdkazqqz" method="POST" class="form" data-form>
+            <input type="hidden" name="_subject" value="Pesan Baru dari Contact Form">
+
+            <div class="input-wrapper">
+                <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+                <input type="email" name="email" class="form-input" placeholder="Email address" required
+                    data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+            </button>
+
+        </form>
+
+    </section>
+
+</article>
