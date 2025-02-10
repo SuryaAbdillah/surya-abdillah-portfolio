@@ -296,15 +296,15 @@
       .then(data => document.getElementById("contact-container").innerHTML = data)
       .catch(error => console.error("Error loading contact:", error));
 
-    fetch("html_components/portfolio.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("portfolio-container").innerHTML = data)
-      .catch(error => console.error("Error loading portfolio:", error));
-
     fetch("html_components/blog.html")
       .then(response => response.text())
       .then(data => document.getElementById("blog-container").innerHTML = data)
       .catch(error => console.error("Error loading blog:", error));
+
+    fetch("html_components/portfolio.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("portfolio-container").innerHTML = data)
+      .catch(error => console.error("Error loading portfolio:", error));
   </script>
 </body>
 
