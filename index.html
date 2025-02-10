@@ -189,94 +189,15 @@
           </p>
         </section>
 
-
         <!--
           - service
         -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/new/data-analysis.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Analysis</h4>
-
-                <p class="service-item-text">
-                  Analyzing and interpreting complex data to provide actionable insights for decision-making.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/new/data-science.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Science</h4>
-
-                <p class="service-item-text">
-                  Applying advanced analytical techniques to extract meaningful patterns and insights from data.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/new/artificial-intelligence.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Artificial Intelligence</h4>
-
-                <p class="service-item-text">
-                  Developing algorithms and models that enable machines to simulate human intelligence and
-                  decision-making.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/new/teaching-assistant.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Teaching Assistant</h4>
-
-                <p class="service-item-text">
-                  Supporting instructors in delivering course content, assisting students with learning, and helping
-                  manage course logistics.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
+        <div id="services-container"></div>
 
         <!--
           - Skills
         -->
-
         <div id="skills-container"></div>
-
 
       </article>
 
@@ -285,116 +206,7 @@
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Sepuluh Nopember Institute of Technology</h4>
-
-              <span>2020 — 2024</span>
-
-              <p class="timeline-text">
-                Bachelor degree in Computer Science. My Thesis is "DETECTION OF DISHARMONY IN LEGAL DOCUMENTS USING
-                TRANSFORMER CLASSIFICATION MODEL". Finalist of Satria Data Competition 2023 and 2024, the most
-                impressive presentation in 2024.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Public High School of 1 Sidoarjo</h4>
-
-              <span>2017 — 2020</span>
-
-              <p class="timeline-text">
-                Mathematics and Natural Sciences Program. Active in internal school competitions and organized class
-                members for 2 years.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Artificial Intelligence Researcher</h4>
-
-              <span>Dec, 2024 — Present</span>
-
-              <p class="timeline-text">
-                National Taiwan University of Science and Technology (CITI Laboratory). Dataset synthesis and evaluation
-                of RAG applications. Improving application performance based on feedback.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Teaching Assistant</h4>
-
-              <span>Jul, 2022 — Jan, 2024</span>
-
-              <p class="timeline-text">
-                Courses: Database System, Database Technology, Digital Photo Processing, Graph Theory, Computer Network,
-                Database Design and Programming with SQL.
-                - Coordinated class activities to ensure structured learning.
-                - Supervised lectures, exams, and practical sessions for an orderly environment.
-                - Monitored student progress and evaluated learning outcomes.
-                - Assisted lecturers in delivering course materials and clarifying concepts.
-                - Assessed student assignments and provided feedback.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Laboratory Internship</h4>
-
-              <span>Aug, 2023 — Oct, 2023</span>
-
-              <p class="timeline-text">
-                Developing a solution for lexicon prediction problems using a query expansion approach to enrich the
-                lexicon for specific topic domains.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-      </article>
+      <div id="resume-container"></div>
 
 
       <!--
@@ -917,6 +729,16 @@
       .then(response => response.text())
       .then(data => document.getElementById("skills-container").innerHTML = data)
       .catch(error => console.error("Error loading skills:", error));
+
+    fetch("html_components/services.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("services-container").innerHTML = data)
+      .catch(error => console.error("Error loading services:", error));
+
+    fetch("html_components/resume.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("resume-container").innerHTML = data)
+      .catch(error => console.error("Error loading resume:", error));
   </script>
 </body>
 
