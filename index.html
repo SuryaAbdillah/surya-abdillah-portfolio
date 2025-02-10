@@ -227,7 +227,7 @@
           <h2 class="h2 article-title">Portfolio</h2>
         </header>
 
-        <div id="portfolio-container"></div>
+        <div id="projects-container"></div>
 
       </article>
 
@@ -265,47 +265,15 @@
 
   </main>
 
-
   <!--
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script>
-    fetch("html_components/skills.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("skills-container").innerHTML = data)
-      .catch(error => console.error("Error loading skills:", error));
-
-    fetch("html_components/services.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("services-container").innerHTML = data)
-      .catch(error => console.error("Error loading services:", error));
-
-    fetch("html_components/resume.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("resume-container").innerHTML = data)
-      .catch(error => console.error("Error loading resume:", error));
-
-    fetch("html_components/contact.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("contact-container").innerHTML = data)
-      .catch(error => console.error("Error loading contact:", error));
-
-    fetch("html_components/blog.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("blog-container").innerHTML = data)
-      .catch(error => console.error("Error loading blog:", error));
-
-    fetch("html_components/portfolio.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("portfolio-container").innerHTML = data)
-      .catch(error => console.error("Error loading portfolio:", error));
-  </script>
 
   <!--
-    - custom js link
-  -->
+      - custom js link
+    -->
   <script src="./assets/js/script.js"></script>
 </body>
 
