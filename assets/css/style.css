@@ -178,6 +178,13 @@ body { background: var(--smoky-black); }
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  gap: 8px;
+}
+
+/* Hide icon by default */
+.download-icon {
+  display: none;
+  font-size: 18px; /* Adjust icon size */
 }
 
 /* Hover Effect */
@@ -189,16 +196,26 @@ body { background: var(--smoky-black); }
   color: black; /* Change text color on hover */
 }
 
-/* Responsive Design */
+/* RESPONSIVE: Change to icon only on mobile */
 @media (max-width: 768px) {
-  .download-btn {
-      padding: 4px 8px; /* Smaller button for mobile */
+  .download-text {
+      display: none; /* Hide text */
   }
 
-  .download-btn a {
-      font-size: 8px;
+  .download-icon {
+      display: block; /* Show icon */
+  }
+
+  .download-btn {
+      width: 0px;
+      height: 35px;
+      padding: 1em;
+      border-radius: 50%;
+      right: 15px; /* Adjust placement for mobile */
+      margin-left: 20%;
   }
 }
+
 
 
 /*-----------------------------------*\
