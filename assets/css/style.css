@@ -159,6 +159,46 @@ body { background: var(--smoky-black); }
 
 
 
+.download-btn {
+  display: flex; /* Menggunakan flexbox */
+  align-items: center; /* Memusatkan vertikal */
+  justify-content: center; /* Memusatkan horizontal */
+  border: 2px solid #F8D67B; /* Stroke color */
+  background-color: transparent; /* No fill */
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  height: 40px; /* Tetapkan tinggi agar tombol terlihat seragam */
+}
+
+.download-btn a {
+  color: #F8D67B; /* Text color */
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Hover Effect */
+.download-btn:hover {
+  background-color: #F8D67B; /* Adds fill color on hover */
+}
+
+.download-btn:hover a {
+  color: black; /* Change text color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .download-btn {
+      padding: 4px 8px; /* Smaller button for mobile */
+  }
+
+  .download-btn a {
+      font-size: 8px;
+  }
+}
 
 
 /*-----------------------------------*\
