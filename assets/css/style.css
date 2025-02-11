@@ -1254,6 +1254,31 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 
+@media (max-width: 768px) {
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    overflow-x: auto;
+  }
+
+  .skills-item {
+    width: 80px; /* Lebih besar agar mudah dilihat di mobile */
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skills-item img {
+    width: 60px;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
 
 
 
